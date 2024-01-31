@@ -233,7 +233,7 @@ dddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddddd
 . . . . b . b . b . b . b . . . 
 1 1 1 . b b . b . b . b b . . . 
 . . . . b . b . b . b . b . . . 
-. 1 1 . . b . b . b . b . . . . 
+1 1 1 . . b . b . b . b . . . . 
 . . . . . b b . b . b b . . . . 
 . 1 . . . b . b . b . b . . . . 
 . . . . . . b b b b b . . . . . 
