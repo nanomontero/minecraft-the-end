@@ -5,14 +5,14 @@ sprites.onOverlap(SpriteKind.Enemy, SpriteKind.Player, function (sprite, otherSp
     info.changeLifeBy(-1)
     Steve.destroy(effects.bubbles, 200)
     pause(200)
-    Steve = sprites.create(assets.image`Steve`, SpriteKind.Player)
-    Steve.setPosition(7, 104)
+    Steve = sprites.create(assets.image`DoomGuy`, SpriteKind.Player)
     controller.moveSprite(Steve, 50, 50)
     Steve.setStayInScreen(true)
     Zombie.follow(Steve, 10)
+    Steve.setPosition(7, 104)
 })
 sprites.onOverlap(SpriteKind.Projectile, SpriteKind.Enemy, function (sprite, otherSprite) {
-    otherSprite.destroy(effects.bubbles, 500)
+    otherSprite.destroy(effects.fire, 500)
     sprite.destroy(effects.fire, 100)
     Kills += 1
     if (Kills < MobsUntilBoss) {
@@ -31,10 +31,11 @@ let Zombie: Sprite = null
 let Steve: Sprite = null
 let Kills = 0
 let MobsUntilBoss = 0
+music.play(music.createSong(hex`00780004081100`), music.PlaybackMode.LoopingInBackground)
 scene.setBackgroundImage(assets.image`Overworld`)
 MobsUntilBoss = 15
 Kills = 0
-Steve = sprites.create(assets.image`Steve`, SpriteKind.Player)
+Steve = sprites.create(assets.image`DoomGuy`, SpriteKind.Player)
 Steve.setPosition(7, 104)
 controller.moveSprite(Steve, 50, 50)
 Steve.setStayInScreen(true)
